@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/NaturalGenius/spring-config/
+          username: 2031434350@qq.com
+          password: zlhiua_88
+server:
+  port: 9099
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int} #势力id
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+app: 123456
